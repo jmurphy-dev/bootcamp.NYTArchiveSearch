@@ -24,12 +24,12 @@ $('button[type="submit"]').on('click', e => {
   let searchEndDate = $("#InputEnd").val();
 
   if (searchTerm === "") {
-    // TODO: Alert of some sort
+    showAlert('A search term is required');
     return;
   }
 
   if (searchDepth === "") {
-    // TODO: Alert of some sort
+    showAlert('Number of articles is required');
     return;
   }
 
@@ -41,3 +41,12 @@ $('button[type="submit"]').on('click', e => {
   console.log(searchParams);
 });
 
+function showAlert(msg) {
+  $('.alerts')
+    .empty()
+    .append(
+      $('<div>')
+        .addClass('alert alert-danger')
+        .text(msg)
+    );
+}
