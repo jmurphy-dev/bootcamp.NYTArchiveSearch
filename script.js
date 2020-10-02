@@ -3,7 +3,6 @@ const searchParams = {
   searchDepth: "",
   searchBeginDate: "",
   searchEndDate: "",
-  // searchQuery: `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchParams.searchTerm}&api-key=cqAs97wG20GAPgLPCyAlYv1Ujuj8VfcU&begin_date=${searchParams.searchBeginDate}&end_date=${searchParms.searchEndDate}&page=${searchParams.searchDepth}`,
 
   get searchQuery() {
     let searchQuery = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${this.searchTerm}&api-key=cqAs97wG20GAPgLPCyAlYv1Ujuj8VfcU&page=${this.searchDepth}`;
@@ -14,4 +13,25 @@ const searchParams = {
     return searchQuery
   }
 };
+
+$('button[type="submit"]').on('click', e => {
+  e.preventDefault();
+
+  if ($('#InputTerm').val() === "") {
+    // TODO: Alert of some sort
+    return;
+  }
+
+  if ($("#InputNumberRecords").val() === "") {
+    // TODO: Alert of some sort
+    return;
+  }
+
+  searchParams.searchTerm = $("#InputTerm").val();
+  searchParams.searchDepth = $("#InputNumberRecords").val();
+  searchParams.searchBeginDate = $("#InputStart").val();
+  searchParams.searchEndDate = $("#InputEnd").val();
+
+  console.log(searchParams);
+});
 
