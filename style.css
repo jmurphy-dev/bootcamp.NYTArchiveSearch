@@ -7,3 +7,10 @@
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.btn{
+    background-color: transparent;
+    color: black;
+}
+.search-parameters{
+    background-color: rgb(236, 234, 234);
+}
