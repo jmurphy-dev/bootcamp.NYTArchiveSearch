@@ -15,3 +15,8 @@ const searchParams = {
   }
 };
 
+let searchTerm = $("#search-term").val();
+let searchDepth = $("#search-depth").val();
+let searchBeginDate = $("#start-year").val();
+let searchEndDate = $("#end-year").val();
+
