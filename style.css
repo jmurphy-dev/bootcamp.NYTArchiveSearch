@@ -10,7 +10,11 @@
 .btn{
     background-color: transparent;
     color: black;
+    border-color: transparent;
 }
-.search-parameters{
-    background-color: rgb(236, 234, 234);
+.container{
+    border-width: 0.2mm;
+    border-style: solid;
+    padding: auto;
+    border-color: rgb(230, 229, 229);
 }
