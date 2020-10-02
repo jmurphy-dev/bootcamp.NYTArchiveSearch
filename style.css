@@ -8,14 +8,14 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .btn{
-    background-color: transparent;
+    background-color: rgb(230, 229, 229);
     color: black;
-    border-color: transparent;
+    border-color: rgb(230, 229, 229);
 }
 .container{
     border-width: 0.2mm;
     border-style: solid;
-    padding: auto;
+    padding: 15px;
     border-color: rgb(230, 229, 229);
 }
 
